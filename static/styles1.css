@@ -1,0 +1,77 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e1e1e, #2d2d2d);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container */
+.container {
+    background-color: rgba(45, 45, 45, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Title */
+h1 {
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff4d4d; /* Red color for error */
+    background: linear-gradient(90deg, #ff4d4d, #ff6666);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slideInDown 1s ease-in-out;
+}
+
+/* Description */
+p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    color: #cccccc;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Link */
+a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

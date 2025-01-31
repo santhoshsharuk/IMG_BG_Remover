@@ -1,0 +1,194 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e1e1e, #2d2d2d);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container */
+.container {
+    background-color: rgba(45, 45, 45, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out, float 5s infinite ease-in-out;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Title */
+h1 {
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    background: linear-gradient(90deg, #007bff, #00bfff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slideInDown 1s ease-in-out;
+}
+
+/* Description */
+p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    color: #cccccc;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* File Input */
+input[type="file"] {
+    margin-bottom: 25px;
+    padding: 10px;
+    border: 2px dashed #007bff;
+    border-radius: 10px;
+    background-color: rgba(30, 30, 30, 0.8);
+    color: #ffffff;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+input[type="file"]:hover {
+    border-color: #00bfff;
+    background-color: rgba(45, 45, 45, 0.8);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(90deg, #007bff, #00bfff);
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Result Section */
+.result {
+    margin-top: 25px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fixed-Size Image Container */
+.image-container {
+    width: 300px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    margin: 0 auto; /* Center the container */
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    overflow: hidden; /* Ensure the image doesn't overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(30, 30, 30, 0.8);
+    animation: float 5s infinite ease-in-out;
+}
+
+/* Image Styles */
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensure the image fits within the container */
+    border-radius: 8px;
+    animation: zoomIn 0.5s ease-in-out;
+}
+
+/* Download Button */
+.download-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background: linear-gradient(90deg, #28a745, #32cd32);
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

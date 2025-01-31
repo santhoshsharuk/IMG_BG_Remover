@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Not Found</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>File Not Found</h1>
+        <p>The file you are trying to download does not exist or has been deleted.</p>
+        <p>Return to the <a href="{{ url_for('index') }}">homepage</a>.</p>
+    </div>
+</body>
+</html>
