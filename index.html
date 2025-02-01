@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Remover Tool</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            height: 400px; /* Adjust height as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            position: relative;
+            z-index: 2;
+        }
+        header p {
+            font-size: 1.2em;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            opacity: 0.7;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .features, .how-it-works, .cta {
+            margin: 40px 0;
+        }
+        .features ul, .how-it-works ol {
+            list-style-type: none;
+            padding: 0;
+        }
+        .features li, .how-it-works li {
+            background: white;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .features li:hover, .how-it-works li:hover {
+            transform: translateY(-5px);
+        }
+        .cta {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 10px;
+        }
+        .cta a {
+            background-color: white;
+            color: #007BFF;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .cta a:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        .image-upload {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .image-upload input[type="file"] {
+            display: none;
+        }
+        .image-upload label {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .image-upload label:hover {
+            background-color: #0056b3;
+        }
+        .image-preview {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .image-preview img {
+            max-width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin: 10px 0;
+        }
+        iframe {
+            width: 100%;
+            height: 800px; /* Adjust height as needed */
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            header {
+                height: 300px; /* Reduce header height for mobile */
+                padding: 30px 0;
+            }
+            header h1 {
+                font-size: 2em; /* Smaller font size for mobile */
+            }
+            header p {
+                font-size: 1em; /* Smaller font size for mobile */
+            }
+            .container {
+                padding: 10px; /* Reduce padding for mobile */
+            }
+            .features li, .how-it-works li {
+                padding: 15px; /* Reduce padding for mobile */
+            }
+            .image-preview img {
+                max-width: 100%; /* Stack images vertically on mobile */
+                margin: 10px 0;
+            }
+            iframe {
+                height: 1100px; /* Reduce iframe height for mobile */
+            }
+            .cta a {
+                padding: 10px 20px; /* Smaller button for mobile */
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <video autoplay muted loop class="hero-video">
+            <source src="https://cdn.pixabay.com/video/2021/07/12/81094-574743672_tiny.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1>Background Remover Tool</h1>
+        <p>Effortlessly remove backgrounds from your images with our powerful tool.</p>
+    </header>
+
+    <div class="container">
+        <section class="image-upload">
+            <h2>Use the Tool Below</h2>
+            <iframe src="https://santhoshsharuk-bg-remover.hf.space/" title="Background Remover Tool"></iframe>
+        </section>
+        
+        <section class="features">
+            
+            <h2>Features</h2>
+            <ul>
+                <li>Fast and accurate background removal</li>
+                <li>Supports multiple image formats</li>
+                <li>User-friendly interface</li>
+                <li>No installation required</li>
+            </ul>
+        </section>
+
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <ol>
+                <li>Upload your image</li>
+                <li>Our tool processes the image to remove the background</li>
+                <li>Download your image with a transparent background</li>
+            </ol>
+        </section>
+
+        
+
+        <section class="cta">
+            <h2>Ready to Remove Backgrounds?</h2>
+            <a href="#image-upload">Try It Now</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Background Remover Tool. All rights reserved.</p>
+    </footer>
+</body>
+</html>
